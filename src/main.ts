@@ -3,15 +3,7 @@ import App from "./App.vue";
 import ElementPlus from 'element-plus'
 import router from './router'
 
-// import "~/styles/element/index.scss";
-
-// import ElementPlus from "element-plus";
-// import all element css, uncommented next line
-// import "element-plus/dist/index.css";
-
-// or use cdn, uncomment cdn link in `index.html`
-
-import "~/styles/index.scss";
+import "~/styles/index.scss"; // 引入自定义 scss
 import "uno.css";
 
 // If you want to use ElMessage, import it.

@@ -14,19 +14,20 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+// 项目 src 目录
 const pathSrc = path.resolve(__dirname, 'src')
 
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': `${pathSrc}/`,
+      '~/': `${pathSrc}/`, // 使用 ～ 作为 src 目录的别名
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "~/styles/element/index.scss" as *;`,
+        additionalData: `@use "~/styles/element/index.scss" as *;`, // 引入自定义空间
       },
     },
   },

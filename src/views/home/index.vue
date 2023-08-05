@@ -1,8 +1,8 @@
 <script setup>
-import Aside from './HomeAside.vue'
-import Header from './HomeHeader.vue'
-import Main from './HomeMain.vue'
-import Footer from './HomeFooter.vue'
+import Aside from '~/components/layouts/BaseAside.vue'
+import Header from '~/components/layouts/BaseHeader.vue'
+import Main from '~/components/layouts/BaseMain.vue'
+import Footer from '~/components/layouts/BaseFooter.vue'
 </script>
 
 <template>
