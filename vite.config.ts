@@ -17,7 +17,6 @@ import {
 // 项目 src 目录
 const pathSrc = path.resolve(__dirname, 'src')
 
-// https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
@@ -34,21 +33,16 @@ export default defineConfig({
   plugins: [
     vue(),
     Components({
-      // allow auto load markdown components under `./src/components/`
-      extensions: ['vue', 'md'],
-      // allow auto import and register components used in markdown
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      extensions: ['vue', 'md'], // 指定可以自动加载的文件扩展名
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/], // 指定可以自动加载的文件匹配模式
       resolvers: [
-        ElementPlusResolver({
+        ElementPlusResolver({ // 以支持 Element Plus 组件库的自动导入和注册
           importStyle: 'sass',
         }),
       ],
-      dts: 'src/components.d.ts',
+      dts: 'src/components.d.ts', // 指定生成的类型声明文件的路径
     }),
-
-    // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
-    Unocss({
+    Unocss({ // 集成了 Unocss 并配置了一些优化规则和特性
       presets: [
         presetUno(),
         presetAttributify(),

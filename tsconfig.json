@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
+    "baseUrl": ".", // 指定了基本路径，通常是相对于 tsconfig.json 文件所在的目录。
+    "target": "esnext", // 指定编译的目标 JavaScript 版本，这里是 ESNext，即最新的 ECMAScript 标准。
+    "useDefineForClassFields": true, // 允许在类中使用 TypeScript 的属性声明语法。
+    "module": "esnext", // 指定输出的模块类型，这里是 ESNext。
+    "moduleResolution": "node", // 指定模块解析策略，这里使用 Node.js 的模块解析。
+    "strict": true, // 开启严格模式，启用了所有严格类型检查选项。
+    "jsx": "preserve", // 指定 JSX 的处理方式，这里是保留 JSX，不进行转换。
+    "sourceMap": true, // 生成源映射文件，以便在调试时可以追踪到 TypeScript 源码。
+    "resolveJsonModule": true, // 允许导入 JSON 文件作为模块。
+    "esModuleInterop": true, // 启用 CommonJS 和 ES 模块的互操作性，使导入和导出更加一致。
+    "lib": ["esnext", "dom"], // 指定 TypeScript 可以访问的内置库，这里包括 ESNext 和 DOM。
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["src/*"] // 配置路径别名，允许使用 ~/* 来代表 src/*。
     },
-    "skipLibCheck": true
+    "skipLibCheck": true // 跳过对声明文件的检查，可以提高编译速度。
   },
-  "vueCompilerOptions": {
-    "target": 3
+  "vueCompilerOptions": { // 这是 Vue 单文件组件的编译选项部分。
+    "target": 3 // 指定 Vue 模板编译的目标版本，这里是 Vue 3。
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"] // 指定要包含在编译中的文件的路径模式。
 }

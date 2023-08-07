@@ -25,10 +25,6 @@ declare module 'vue' {
     ElPopover: typeof import('element-plus/es')['ElPopover']
     ElResult: typeof import('element-plus/es')['ElResult']
     ElRow: typeof import('element-plus/es')['ElRow']
-    HomeAside: typeof import('./components/layouts/HomeAside.vue')['default']
-    HomeFooter: typeof import('./components/layouts/HomeFooter.vue')['default']
-    HomeHeader: typeof import('./components/layouts/HomeHeader.vue')['default']
-    HomeMain: typeof import('./components/layouts/HomeMain.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
