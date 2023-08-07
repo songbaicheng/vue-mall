@@ -14,7 +14,9 @@
     "paths": {
       "~/*": ["src/*"] // 配置路径别名，允许使用 ~/* 来代表 src/*。
     },
-    "skipLibCheck": true // 跳过对声明文件的检查，可以提高编译速度。
+    "skipLibCheck": true, // 跳过对声明文件的检查，可以提高编译速度。
+    "allowJs": true, // 允许JS
+    "checkJs": true, // 检查JS
   },
   "vueCompilerOptions": { // 这是 Vue 单文件组件的编译选项部分。
     "target": 3 // 指定 Vue 模板编译的目标版本，这里是 Vue 3。
