@@ -1,14 +1,7 @@
-<script setup>
-import Aside from '~/components/layouts/BaseAside.vue'
-import Header from '~/components/layouts/BaseHeader.vue'
-import Main from '~/components/layouts/BaseMain.vue'
-import Footer from '~/components/layouts/BaseFooter.vue'
-</script>
-
 <template>
     <div class="common-layout">
         <el-container>
-            <el-aside width="200px">
+            <el-aside>
                 <Aside />
             </el-aside>
             <el-container>
@@ -25,4 +18,10 @@ import Footer from '~/components/layouts/BaseFooter.vue'
         </el-container>
     </div>
 </template>
-  
+
+<script setup>
+import Aside from '~/components/layouts/BaseAside.vue'
+import Header from '~/components/layouts/BaseHeader.vue'
+import Main from '~/components/layouts/BaseMain.vue'
+import Footer from '~/components/layouts/BaseFooter.vue'
+</script>
