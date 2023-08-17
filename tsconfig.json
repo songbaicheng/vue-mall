@@ -10,16 +10,26 @@
     "sourceMap": true, // 生成源映射文件，以便在调试时可以追踪到 TypeScript 源码。
     "resolveJsonModule": true, // 允许导入 JSON 文件作为模块。
     "esModuleInterop": true, // 启用 CommonJS 和 ES 模块的互操作性，使导入和导出更加一致。
-    "lib": ["esnext", "dom"], // 指定 TypeScript 可以访问的内置库，这里包括 ESNext 和 DOM。
-    "paths": {
-      "~/*": ["src/*"] // 配置路径别名，允许使用 ~/* 来代表 src/*。
-    },
     "skipLibCheck": true, // 跳过对声明文件的检查，可以提高编译速度。
     // "allowJs": true, // 允许JS
     // "checkJs": true, // 检查JS
+    "lib": [ // 指定 TypeScript 可以访问的内置库，这里包括 ESNext 和 DOM。
+      "esnext",
+      "dom"
+    ],
+    "paths": { // 配置路径别名，允许使用 ~/* 来代表 src/*。
+      "~/*": [
+        "src/*"
+      ]
+    },
   },
   "vueCompilerOptions": { // 这是 Vue 单文件组件的编译选项部分。
     "target": 3 // 指定 Vue 模板编译的目标版本，这里是 Vue 3。
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"] // 指定要包含在编译中的文件的路径模式。
+  "include": [ // 指定要包含在编译中的文件的路径模式。
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ]
 }
