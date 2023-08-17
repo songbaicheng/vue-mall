@@ -23,13 +23,6 @@ export default defineConfig({
       '~/': `${pathSrc}/`, // 使用 ～ 作为 src 目录的别名
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "~/styles/element/index.scss" as *;`, // 引入自定义空间
-      },
-    },
-  },
   plugins: [
     vue(),
     AutoImport({
