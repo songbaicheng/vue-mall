@@ -6,8 +6,8 @@ import Footer from '~/components/layouts/BaseFooter.vue'
 </script>
 
 <template>
-    <div class="common-layout">
-        <el-container>
+    <div>
+        <el-container style="height: 100%;">
             <el-aside>
                 <Aside />
             </el-aside>
