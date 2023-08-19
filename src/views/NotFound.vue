@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 404 图片地址
-import img_404 from '../assets/images/gif_404.gif';
+import img_404 from '~/assets/images/gif_404.gif';
 
 /**
  * 返回上一页

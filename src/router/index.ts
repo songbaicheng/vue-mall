@@ -1,32 +1,41 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Home from '../views/home/index.vue';
-import NotFound from '../views/NotFound.vue';
+import Home from '~/views/home/index.vue';
+import Layout from '~/views/layout/index.vue';
+import NotFound from '~/views/NotFound.vue';
 
-const routes: Array<RouteRecordRaw> = [
+// 通用路由
+const constantRouterMap: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    redirect: '/home',
+    component: Layout,
+    meta: {title: '首页', icon: 'home'},
+    children: [{
+      path: '/home',
+      name: 'home',
+      component: Home,
+      meta: {title: '仪表盘', icon: 'dashboard'}
+    }]
   },
-  {
-    path: '/home',
-    redirect: '/',
-  },
-  {
+  { // 404 界面
     path: '/404',
     name: 'NotFound',
     component: NotFound,
-  },
+  }
+];
+
+// 路由
+const asyncRouterMap: Array<RouteRecordRaw> = [
   {
     // 非匹配路径都重定向到 404 界面
     path: '/:pathMatch(.*)*',
     redirect: '/404',
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes: constantRouterMap,
 });
 
 export default router;
