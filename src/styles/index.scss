@@ -1,4 +1,6 @@
+// 初始化样式
+@use './init.scss';
 // Element-plus 样式
 @use './element-plus.scss';
 // 全局样式
-@use './global.scss';
+@use './common.scss';

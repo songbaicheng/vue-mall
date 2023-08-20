@@ -1,17 +1,17 @@
 <template>
-    <el-container>
+    <el-container class="sidebar-container">
         <el-aside class="app-sidebar">
             <Aside />
         </el-aside>
         <el-container class="main-container">
-            <el-header>
+            <el-header class="app-header">
                 <Header />
             </el-header>
-            <el-main>
+            <el-main class="app-main">
                 <Main />
             </el-main>
-            <el-footer>
-                <Footer />
+            <el-footer class="app-footer">
+                    <Footer />
             </el-footer>
         </el-container>
     </el-container>

@@ -1,3 +1,7 @@
+<script setup>
+import Logo from "~/components/sidebar/Logo.vue";
+</script>
+
 <template>
-    <span>aside</span>
+    <Logo></Logo>
 </template>
