@@ -1,3 +1,3 @@
 <template>
-    Aside
+    <span>aside</span>
 </template>
