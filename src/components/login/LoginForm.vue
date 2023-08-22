@@ -16,7 +16,7 @@
   
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import type { FormInstance, FormRules, ElMessage } from 'element-plus'
+import { FormInstance, FormRules, ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
 
 interface RuleForm {
