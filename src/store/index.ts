@@ -2,9 +2,8 @@ import { defineStore } from 'pinia';
 
 export const GlobalStore = defineStore('GlobalStore', {
     state: () => ({
-        name: 'songbaicheng',
-        age: 23,
-        isLogin: false
+        isLogin: false, // 登录状态
+        entrance: ''
     }),
     getters: {},
     actions: {
