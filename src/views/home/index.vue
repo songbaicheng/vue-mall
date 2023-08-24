@@ -30,3 +30,9 @@
         </el-col>
     </el-row>
 </template>
+
+<script setup lang="ts">
+import { GlobalStore } from '~/store';
+
+const globalStore = GlobalStore();
+</script>
