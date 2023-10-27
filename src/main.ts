@@ -5,7 +5,7 @@ import ElementPlus from 'element-plus'
 import router from '~/router'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import "~/styles/index.scss"; // 引入自定义 scss
-import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import zhCn from 'element-plus/es/locale/lang/zh-cn'; 
 import { createPinia } from 'pinia'
 
 const app = createApp(App);
