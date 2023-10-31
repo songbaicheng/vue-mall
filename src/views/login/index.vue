@@ -19,17 +19,9 @@
 import { ref, onMounted } from 'vue';
 import LoginForm from '~/components/login/LoginForm.vue';
 
-const globalStore = GlobalStore();
 const screenWidth = ref(null);
-const getStatus = async () => {
-    const res = await checkIsSafety(globalStore.entrance);
-    if (res.data === 'unpass') {
-        router.replace({ name: 'entrance' });
-    }
-};
 
 onMounted(() => {
-    getStatus();
     screenWidth.value = document.body.clientWidth;
     window.onresize = () => {
         return (() => {
